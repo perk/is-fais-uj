@@ -1,0 +1,317 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-2">
+<title>Sortlib: Dokumentacja szablonu klasy Sort&lt; T, Visualization_policy &gt;</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.1 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li><a href="namespaces.html"><span>Przestrzenie nazw</span></a></li>
+    <li id="current"><a href="annotated.html"><span>Klasy</span></a></li>
+    <li><a href="files.html"><span>Pliki</span></a></li>
+  </ul></div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Lista&nbsp;klas</span></a></li>
+    <li><a href="functions.html"><span>Składowe&nbsp;klas</span></a></li>
+  </ul></div>
+<h1>Dokumentacja szablonu klasy Sort&lt; T, Visualization_policy &gt;</h1><!-- doxytag: class="Sort" --><code>#include &lt;<a class="el" href="sortlib_8h-source.html">sortlib.h</a>&gt;</code>
+<p>
+<a href="classSort-members.html">Lista wszystkich składowych.</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Metody publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSort.html#508d186f26390ceddbfb7c1ad991e441">bubbleSort</a> (T *tab, int count)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSort.html#4eee7207d4897317ec033fc2a6b0e895">quickSort</a> (T *tab, int count)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSort.html#22161bf0c3365fae744a454f27eac61f">insertionSort</a> (T *tab, int count)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSort.html#95aaf7c96dca9772e81270ca6c659f83">selectionSort</a> (T *tab, int count)</td></tr>
+
+<tr><td colspan="2"><br><h2>Metody prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSort.html#e3da9c06c6a3c32d9fdcf5c8e2a57a80">quickSort_Alg</a> (T *tab, int count, int lewy, int prawy)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSort.html#6e05b63a6a78eeabdec71bf0c3a5f7e7">partition</a> (T *tab, int count, int p, int r)</td></tr>
+
+</table>
+<hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+<h3>template&lt;typename T = int, typename Visualization_policy = No_visualization&lt;T&gt;&gt;<br>
+ class Sort&lt; T, Visualization_policy &gt;</h3>
+
+Klasa zawierajaca algorytmy sortowania z wywolaniami funkcji dot. wizualizacji.<p>
+Aby zobaczyc w jaki sposob zaimplementowany jest konkretny algorytm sortowania i kiedy wywolywane sa funkcje zwiazane z wizualizacja prosze spojrzec w kod zrodlowy.<p>
+<dl class="attention" compact><dt><b>Uwaga:</b></dt><dd>Wszystkie publiczne funkcje z klasy wywoluje sie z dwoma parametrami: wskaznikiem na typ T (pierwszym elementem tablicy) oraz wielkoscia tej tablicy, np. jezeli tablica o nazwie TAB ma dziesiec pol, to wywolanie powinno wygladac tak: function(TAB, 10) lub function(&amp;TAB[0], 10). W szczegolnosci mozemy podac jako pierwszy element srodek tablicy i posortowac tylko jej czesc. </dd></dl>
+
+<p>
+<hr><h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" name="508d186f26390ceddbfb7c1ad991e441"></a><!-- doxytag: member="Sort::bubbleSort" ref="508d186f26390ceddbfb7c1ad991e441" args="(T *tab, int count)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T = int, typename Visualization_policy = No_visualization&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSort.html">Sort</a>&lt; T, Visualization_policy &gt;::bubbleSort           </td>
+          <td>(</td>
+          <td class="paramtype">T *&nbsp;</td>
+          <td class="paramname"> <em>tab</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>count</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Funkcja sortujaca algorytmem bubblesort.<p>
+Funkcja sortuje juz przygotowana tablice, ktorej adres dostala jako parametr wywolania. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>tab</em>&nbsp;</td><td>- wskaznik na element typu T, ktory jest pierwszy w tablicy, ktora bedziemy sortowac </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>count</em>&nbsp;</td><td>- wielkosc tablicy do posortowania </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>funkcja nic nie zwraca </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="4eee7207d4897317ec033fc2a6b0e895"></a><!-- doxytag: member="Sort::quickSort" ref="4eee7207d4897317ec033fc2a6b0e895" args="(T *tab, int count)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T = int, typename Visualization_policy = No_visualization&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSort.html">Sort</a>&lt; T, Visualization_policy &gt;::quickSort           </td>
+          <td>(</td>
+          <td class="paramtype">T *&nbsp;</td>
+          <td class="paramname"> <em>tab</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>count</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Funkcja wywolujaca algorytm quicksort z odpowiednimi danymi.<p>
+Funkcja sortuje juz przygotowana tablice, ktorej adres dostala jako parametr wywolania. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>tab</em>&nbsp;</td><td>- wskaznik na element typu T, ktory jest pierwszy w tablicy, ktora bedziemy sortowac </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>count</em>&nbsp;</td><td>- wielkosc tablicy do posortowania </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>funkcja nic nie zwraca </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="e3da9c06c6a3c32d9fdcf5c8e2a57a80"></a><!-- doxytag: member="Sort::quickSort_Alg" ref="e3da9c06c6a3c32d9fdcf5c8e2a57a80" args="(T *tab, int count, int lewy, int prawy)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T = int, typename Visualization_policy = No_visualization&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSort.html">Sort</a>&lt; T, Visualization_policy &gt;::quickSort_Alg           </td>
+          <td>(</td>
+          <td class="paramtype">T *&nbsp;</td>
+          <td class="paramname"> <em>tab</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>lewy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>prawy</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [inline, private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Funkcja sortujaca algorytmem quicksort.<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>tab</em>&nbsp;</td><td>- wskaznik na element typu T, ktory jest pierwszy w tablicy, ktora bedziemy sortowac </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>count</em>&nbsp;</td><td>- wielkosc tablicy do posortowania </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>lewy</em>&nbsp;</td><td>- lewy kraniec aktualnego przedzialu </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>prawy</em>&nbsp;</td><td>- prawy kraniec aktualnego przedzialu </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>funkcja nic nie zwraca </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="6e05b63a6a78eeabdec71bf0c3a5f7e7"></a><!-- doxytag: member="Sort::partition" ref="6e05b63a6a78eeabdec71bf0c3a5f7e7" args="(T *tab, int count, int p, int r)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T = int, typename Visualization_policy = No_visualization&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSort.html">Sort</a>&lt; T, Visualization_policy &gt;::partition           </td>
+          <td>(</td>
+          <td class="paramtype">T *&nbsp;</td>
+          <td class="paramname"> <em>tab</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>r</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [inline, private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Funkcja pomocnicza wykorzystywana przy quicksort.<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>tab</em>&nbsp;</td><td>- wskaznik na element typu T, ktory jest pierwszy w tablicy, ktora bedziemy sortowac </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>count</em>&nbsp;</td><td>- wielkosc tablicy do posortowania </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>p</em>&nbsp;</td><td>- lewy kraniec przedzialu ktory "porzadkujemy" </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>r</em>&nbsp;</td><td>- prawy kraniec przedzialu ktory "porzadkujemy" </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>funkcja zwraca pozycje elementu, ktory jest graniczny dla ciagow z lewej i prawej strony </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="22161bf0c3365fae744a454f27eac61f"></a><!-- doxytag: member="Sort::insertionSort" ref="22161bf0c3365fae744a454f27eac61f" args="(T *tab, int count)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T = int, typename Visualization_policy = No_visualization&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSort.html">Sort</a>&lt; T, Visualization_policy &gt;::insertionSort           </td>
+          <td>(</td>
+          <td class="paramtype">T *&nbsp;</td>
+          <td class="paramname"> <em>tab</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>count</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Funkcja sortujaca algorytmem insertionSort.<p>
+Funkcja sortuje juz przygotowana tablice, ktorej adres dostala jako parametr wywolania. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>tab</em>&nbsp;</td><td>- wskaznik na element typu T, ktory jest pierwszy w tablicy, ktora bedziemy sortowac </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>count</em>&nbsp;</td><td>- wielkosc tablicy do posortowania </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>funkcja nic nie zwraca </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="95aaf7c96dca9772e81270ca6c659f83"></a><!-- doxytag: member="Sort::selectionSort" ref="95aaf7c96dca9772e81270ca6c659f83" args="(T *tab, int count)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T = int, typename Visualization_policy = No_visualization&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSort.html">Sort</a>&lt; T, Visualization_policy &gt;::selectionSort           </td>
+          <td>(</td>
+          <td class="paramtype">T *&nbsp;</td>
+          <td class="paramname"> <em>tab</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>count</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Funkcja sortujaca algorytmem selectionSort.<p>
+Funkcja sortuje juz przygotowana tablice, ktorej adres dostala jako parametr wywolania. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>tab</em>&nbsp;</td><td>- wskaznik na element typu T, ktory jest pierwszy w tablicy, ktora bedziemy sortowac </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>count</em>&nbsp;</td><td>- wielkosc tablicy do posortowania </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>funkcja nic nie zwraca </dd></dl>
+
+</div>
+</div><p>
+<hr>Dokumentacja dla tej klasy została wygenerowana z pliku:<ul>
+<li><a class="el" href="sortlib_8h-source.html">sortlib.h</a></ul>
+<hr size="1"><address style="align: right;"><small>Wygenerowano Sat Aug 4 18:13:49 2007 dla Sortlib programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.1 </small></address>
+</body>
+</html>

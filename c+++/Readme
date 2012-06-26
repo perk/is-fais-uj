@@ -1,0 +1,58 @@
+#######################################################################
+Autor: Marcin Stozek
+#######################################################################
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Projekt wykonany jako zaliczenie z przedmiotu "Zaawansowany C++", 
+Informatyka Stosowana, Wydział Fizyki, Astronomii i Informatyki Stosowanej, Uniwersytet Jagielloński
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Biblioteka sluzaca do wizualizacji procesu sortowania.
+Do biblioteki dodana klasa Text_visualization (w pliku visualization_policy.h), ktora implementuje proste wypisywanie na ekran.
+
+W folderze doxy znajduje sie dokumentacja wykonana za pomoca doxygena, a w katalogu glownym jego plik konfiguracyjny o nazwie Doxyfile.
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Zasada dzialania:
+Biblioteka umozliwia dowolne wizualizowanie procesu sortowania, obliczanie ilosci wykonanych zamian, porownan.
+Aby wyswietlac wyniki nalezy albo napisac wlasna klase do wizualizacji albo skorzystac z juz napisanych (jedna w pliku visualization_policy.h a druga w test.cpp). W przypadku, gdy chcemy tylko posortowac zbior nie nalezy podawac nic - program skorzysta wtedy z "pustej" wizualizacji, ktora znajduje sie bezposrednio w pliku z biblioteka (sortlib.h) i jest ustawiana automatycznie.
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Sposoby kompilowania u uruchomienia:
+make 
+	skompiluje program napisany w main_test.cpp (Uwaga! nalezy w Makefile podac prawidlowa sciezke do folderu z cppunit)
+
+make sort
+	skompiluje biblioteke (sprawdzi poprawnosc skladniowa)
+
+make run
+	skompiluje i uruchomi program  napisany w main_test.cpp
+
+make przyklad
+	skompiluje i uruchomi przyklad napisany w pliku przyklad.cpp
+
+make tar
+	wyczysci folder i spakuje do pliku ../sortlib.tar.gz
+
+make test
+	to samo co same make
+
+make clean
+	wyczysci folder z skompilowanego kodu i wszystkich niepotrzebnych plikow
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Zawartosc folderu:
+
+doxy/                    - folder z wygenerowana dokumentacja za pomoca doxygena
+Doxyfile                 - plik konfiguracyjny programu doxygen
+main_test.cpp            - program wywolujacy test z pliku test.cpp
+Makefile                 - plik make (dostepne komendy opisane powyzej)
+przyklad.cpp             - przykladowe wykorzystanie biblioteki bez testowania
+Readme                   - ten plik
+sortlib.h                - plik zawierajacy biblioteke i "pusta" wizualizacje
+test.cpp                 - plik z testem
+visualization_policy.h   - plik z przykladowa wizualizacja tekstowa

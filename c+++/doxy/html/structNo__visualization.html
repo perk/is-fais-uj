@@ -1,0 +1,261 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-2">
+<title>Sortlib: Dokumentacja szablonu struktury No_visualization&lt; T &gt;</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.1 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li><a href="namespaces.html"><span>Przestrzenie nazw</span></a></li>
+    <li id="current"><a href="annotated.html"><span>Klasy</span></a></li>
+    <li><a href="files.html"><span>Pliki</span></a></li>
+  </ul></div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Lista&nbsp;klas</span></a></li>
+    <li><a href="functions.html"><span>Składowe&nbsp;klas</span></a></li>
+  </ul></div>
+<h1>Dokumentacja szablonu struktury No_visualization&lt; T &gt;</h1><!-- doxytag: class="No_visualization" --><code>#include &lt;<a class="el" href="sortlib_8h-source.html">sortlib.h</a>&gt;</code>
+<p>
+<a href="structNo__visualization-members.html">Lista wszystkich składowych.</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Statyczne metody publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNo__visualization.html#8da193a84d32eeb052471a4e9b782eda">beforeStep</a> (T *, int, int, int)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNo__visualization.html#5996ed81aabe521a10018bc545648f74">afterStep</a> (T *, int, int, int)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNo__visualization.html#41054a61be4cffae870ce97449cd75ed">comparing</a> (T *, int, int, int)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNo__visualization.html#c8b21bb559d89dc7a96d770fa76016bb">resetCounter</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNo__visualization.html#23bf9d9e2c1dbb69bd67436676b037ec">incCounter</a> ()</td></tr>
+
+</table>
+<hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+<h3>template&lt;typename T&gt;<br>
+ struct No_visualization&lt; T &gt;</h3>
+
+Pusta polityka wizualizacji. 
+<p>
+<hr><h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" name="8da193a84d32eeb052471a4e9b782eda"></a><!-- doxytag: member="No_visualization::beforeStep" ref="8da193a84d32eeb052471a4e9b782eda" args="(T *, int, int, int)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structNo__visualization.html">No_visualization</a>&lt; T &gt;::beforeStep           </td>
+          <td>(</td>
+          <td class="paramtype">T *&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [inline, static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Funkcja wykonujaca sie przed krokiem sortowania.<p>
+Moze np. wypisac, ktore elementy zostana zamienione. Funkcja ta zawsze wystepuje razem z funkcja <a class="el" href="structNo__visualization.html#5996ed81aabe521a10018bc545648f74">afterStep()</a> (przy czym before jest przed wykonaniem zamiany, a after po wykonaniu zamiany). Przed ta funkcja zawsze wywolywana jest funkcja <a class="el" href="structNo__visualization.html#23bf9d9e2c1dbb69bd67436676b037ec">incCounter()</a>.<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>T</em>&nbsp;</td><td>* - wskaznik na tablice </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>- liczba elementow w tablicy </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>- pierwszy element zamieniany </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>- drugi element zamieniany</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>funkcja nic nie zwraca </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="5996ed81aabe521a10018bc545648f74"></a><!-- doxytag: member="No_visualization::afterStep" ref="5996ed81aabe521a10018bc545648f74" args="(T *, int, int, int)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structNo__visualization.html">No_visualization</a>&lt; T &gt;::afterStep           </td>
+          <td>(</td>
+          <td class="paramtype">T *&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [inline, static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Funkcja wykonujaca sie po kolejnym kroku sortowania<p>
+Moze wypisac, ktore elementy zostaly zamienione. Funkcja wystepuje razem z <a class="el" href="structNo__visualization.html#8da193a84d32eeb052471a4e9b782eda">beforeStep()</a>.<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>T</em>&nbsp;</td><td>* - wskaznik na tablice </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>- liczba elementow w tablicy </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>- pierwszy element zamieniany </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>- drugi element zamieniany</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>funkcja nic nie zwraca </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="41054a61be4cffae870ce97449cd75ed"></a><!-- doxytag: member="No_visualization::comparing" ref="41054a61be4cffae870ce97449cd75ed" args="(T *, int, int, int)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structNo__visualization.html">No_visualization</a>&lt; T &gt;::comparing           </td>
+          <td>(</td>
+          <td class="paramtype">T *&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [inline, static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Funkcja <a class="el" href="structNo__visualization.html#41054a61be4cffae870ce97449cd75ed">comparing()</a> wywolywana jest zawsze wtedy, gdy porownujemy dwa elementy.<p>
+Moze wypisac, ktore elementy aktualnie porownujemy. Przed ta funkcja zawsze wywolywana jest funkcja <a class="el" href="structNo__visualization.html#23bf9d9e2c1dbb69bd67436676b037ec">incCounter()</a>.<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>T*</em>&nbsp;</td><td>- wskaznik na tablice<br>
+ </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>- liczba elementow w tablicy<br>
+ </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>- pierwszy element porownywany<br>
+ </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>- drugi element porownywany</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>funkcja nic nie zwraca </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="c8b21bb559d89dc7a96d770fa76016bb"></a><!-- doxytag: member="No_visualization::resetCounter" ref="c8b21bb559d89dc7a96d770fa76016bb" args="()" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structNo__visualization.html">No_visualization</a>&lt; T &gt;::resetCounter           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline, static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Funkcja <a class="el" href="structNo__visualization.html#c8b21bb559d89dc7a96d770fa76016bb">resetCounter()</a> wywolywana jest na poczatku algorytmu sortowania i zeruje licznik porownan<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>funkcja nic nie zwraca </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="23bf9d9e2c1dbb69bd67436676b037ec"></a><!-- doxytag: member="No_visualization::incCounter" ref="23bf9d9e2c1dbb69bd67436676b037ec" args="()" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structNo__visualization.html">No_visualization</a>&lt; T &gt;::incCounter           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline, static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Funkcja zwiekszajaca licznik porownan.<p>
+Funkcja ta jest zawsze wywolywana przed funkcjami <a class="el" href="structNo__visualization.html#41054a61be4cffae870ce97449cd75ed">comparing()</a> oraz <a class="el" href="structNo__visualization.html#8da193a84d32eeb052471a4e9b782eda">beforeStep()</a><p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>funkcja nic nie zwraca </dd></dl>
+
+</div>
+</div><p>
+<hr>Dokumentacja dla tej struktury została wygenerowana z pliku:<ul>
+<li><a class="el" href="sortlib_8h-source.html">sortlib.h</a></ul>
+<hr size="1"><address style="align: right;"><small>Wygenerowano Sat Aug 4 18:13:49 2007 dla Sortlib programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.1 </small></address>
+</body>
+</html>
